@@ -1,27 +1,36 @@
 ﻿using System;
+using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace Calculator
 {
     public class Calculator
     {
-        public double Add(double a, double b)
+        public double Accumulator { get; set; }
+
+
+
+        public double Add(double addend)
         {
-            return a + b;
+            Accumulator += addend;
+            return Accumulator;
         }
 
-        public double Subtract(double a, double b)
+        public double Subtract(double subtractor)
         {
-            return a - b;
+            Accumulator -= subtractor;
+            return Accumulator;
         }
 
-        public double Multiply(double a, double b)
+        public double Multiply(double multiplier)
         {
-            return a * b;
+            Accumulator *= multiplier;
+            return Accumulator;
         }
 
-        public double Power(double a, double b)
+        public double Power(double exponent)
         {
-            return Math.Pow(a, b);
+            Accumulator = Math.Pow(Accumulator, exponent);
+            return Accumulator;
         }
     }
 }
