@@ -16,14 +16,37 @@ namespace Calculator.Test.Unit
             _uut = new Calculator();
         }
 
+        //[TestCase(3, 2, 5)]
+        //[TestCase(-3, -2, -5)]
+        //[TestCase(-3, 2, -1)]
+        //[TestCase(3, -2, 1)]
+        //[TestCase(3, 0, 3)]
+        //public void Add_AddPosAndNegNumbers_ResultIsCorrect(int a, int b, int result)
+        //{
+        //    Assert.That(_uut.Add(a, b), Is.EqualTo(result));
+        //}
+
         [TestCase(3, 2, 5)]
         [TestCase(-3, -2, -5)]
         [TestCase(-3, 2, -1)]
         [TestCase(3, -2, 1)]
         [TestCase(3, 0, 3)]
-        public void Add_AddPosAndNegNumbers_ResultIsCorrect(int a, int b, int result)
+        public void Add_PosAndNegNumbersToAccumulatorValue_ResultIsCorrect(double accumulator, double addend, double result)
         {
-            Assert.That(_uut.Add(a, b), Is.EqualTo(result));
+            _uut.Accumulator = accumulator;
+            Assert.That(_uut.Add(addend), Is.EqualTo(result));
+        }
+
+        [TestCase(3, 2, 5)]
+        [TestCase(-3, -2, -5)]
+        [TestCase(-3, 2, -1)]
+        [TestCase(3, -2, 1)]
+        [TestCase(3, 0, 3)]
+        public void Add_PosAndNegNumbersToAccumulatorValue_AccumulatorChanges(double accumulator, double addend, double result)
+        {
+            _uut.Accumulator = accumulator;
+            _uut.Add(addend);
+            Assert.That(_uut.Accumulator, Is.EqualTo(result));
         }
 
 
