@@ -39,6 +39,7 @@ namespace Calculator
             return Accumulator;
         }
 
+        //Opgave 1
         public double Divide(double a, double b)
         {
             if (b == 0)
@@ -47,5 +48,15 @@ namespace Calculator
             }
             return a / b;
         }
+
+        //Opgave 4 - Ændret version af ovenstående metode (fra opgave 1). 
+        //public double Divide(double divisor)
+        //{
+        //    if (divisor == 0)
+        //    {
+        //        Console.WriteLine("invalid number in divisor");
+        //    }
+        //    return Accumulator /= divisor;
+        //}
     }
 }
