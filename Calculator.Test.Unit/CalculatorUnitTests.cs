@@ -177,5 +177,19 @@ namespace Calculator.Test.Unit
         //{
         //    Assert.That(_uut.Power(x, exp), Is.EqualTo(result));
         //}      
+        
+        [TestCase(0,5,0)]
+        [TestCase(5, 5, 1)]
+        [TestCase(100.5, 5, 20.1)]
+        [TestCase(-5, 5, -1)]
+        [TestCase(-5, -5, 1)]
+        [TestCase(10, 0.5, 20)]
+
+
+        public void Divide_DivideNumbers_ResultIsCorrect(double a, double b, double result)
+        //b !=0
+        {
+            Assert.That(_uut.Divide(a,b),Is.EqualTo(result));
+        }
     }
 }
