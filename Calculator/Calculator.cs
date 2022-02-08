@@ -23,5 +23,14 @@ namespace Calculator
         {
             return Math.Pow(a, b);
         }
+
+        public double Divide(double a, double b)
+        {
+            if (b == 0)
+            {
+                Console.WriteLine("invalid number in b");
+            }
+            return a / b;
+        }
     }
 }
