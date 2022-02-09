@@ -11,7 +11,7 @@ namespace Calculator
 
         public double Add(double addend)
         {
-            Accumulator += addend;
+            Accumulator += addend; 
             return Accumulator;
         }
 
