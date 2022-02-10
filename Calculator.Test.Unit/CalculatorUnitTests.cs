@@ -36,7 +36,7 @@ namespace Calculator.Test.Unit
         public void Divide_DivideByZero_ResultIsException()
             //b =0
         {
-            Assert.That(()=> _uut.Divide(5,0),Throws.TypeOf<DivideByZeroException>());
+            Assert.That(()=> _uut.DivideTwoParam(5,0),Throws.TypeOf<DivideByZeroException>());
         }
 
 
