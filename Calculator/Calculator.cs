@@ -44,7 +44,8 @@ namespace Calculator
         {
             if (b == 0)
             {
-                Console.WriteLine("invalid number in b");
+              throw new DivideByZeroException("invalid number in parameter b");
+
             }
             return a / b;
         }

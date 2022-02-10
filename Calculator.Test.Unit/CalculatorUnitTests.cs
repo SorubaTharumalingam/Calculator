@@ -30,6 +30,16 @@ namespace Calculator.Test.Unit
             Assert.That(_uut.Divide(a, b), Is.EqualTo(result));
         }
 
+        //Opgave 1.1
+
+        [Test]
+        public void Divide_DivideByZero_ResultIsException()
+            //b =0
+        {
+            Assert.That(()=> _uut.Divide(5,0),Throws.TypeOf<DivideByZeroException>());
+        }
+
+
         //Opgave 4: Test om Add-metoden i Calculator returnerer korrekt værdi
         [TestCase(3, 2, 5)]
         [TestCase(-3, -2, -5)]
