@@ -17,7 +17,7 @@ namespace Calculator
         //Resultatet gemmes i Accumulator og returneres.
         public double Add(double addend)
         {
-            Accumulator += addend;
+            Accumulator += addend; 
             return Accumulator;
         }
 
@@ -68,7 +68,8 @@ namespace Calculator
         {
             if (b == 0)
             {
-                Console.WriteLine("invalid number in b");
+              throw new DivideByZeroException("invalid number in parameter b");
+
             }
             return a / b;
         }
